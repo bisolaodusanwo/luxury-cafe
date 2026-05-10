@@ -1,0 +1,145 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0F172A;
+  --background-secondary: #111827;
+  --foreground: #F8FAFC;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-foreground: #F8FAFC;
+  --popover: #111827;
+  --popover-foreground: #F8FAFC;
+  --primary: #D4AF37;
+  --primary-foreground: #0F172A;
+  --secondary: rgba(255, 255, 255, 0.05);
+  --secondary-foreground: #F8FAFC;
+  --muted: #1E293B;
+  --muted-foreground: #9CA3AF;
+  --accent: #D4AF37;
+  --accent-foreground: #0F172A;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #F8FAFC;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: #1a2236;
+  --ring: #D4AF37;
+  --chart-1: #D4AF37;
+  --chart-2: #9CA3AF;
+  --chart-3: #F8FAFC;
+  --chart-4: #1E293B;
+  --chart-5: #334155;
+  --radius: 0.625rem;
+  --gold: #D4AF37;
+  --gold-muted: rgba(212, 175, 55, 0.15);
+}
+
+@theme inline {
+  --font-sans: var(--font-sans), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-gold: var(--gold);
+  --color-gold-muted: var(--gold-muted);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    color-scheme: dark;
+  }
+  input,
+  select,
+  textarea {
+    color-scheme: dark;
+    background-color: #1a2236;
+    color: #F8FAFC;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #9CA3AF;
+  }
+  option {
+    background-color: #1a2236;
+    color: #F8FAFC;
+  }
+}
+
+/* Subtle grain texture overlay */
+.grain-texture {
+  position: relative;
+}
+
+.grain-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Step transition animations ─────────────────────────────────────────── */
+@keyframes stepSlideInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes stepSlideInLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.step-enter-forward  { animation: stepSlideInRight 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.step-enter-backward { animation: stepSlideInLeft  0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Glass panel effect */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gold shimmer effect for special elements */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    #D4AF37 0%,
+    #F5E6A3 50%,
+    #D4AF37 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
