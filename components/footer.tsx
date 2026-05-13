@@ -33,7 +33,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link href="/" className="inline-block">
               <span className="font-serif text-2xl font-medium tracking-wide text-foreground">
-                Maison Glacé
+                Alexelle
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-muted-foreground leading-relaxed">
@@ -45,21 +45,21 @@ export function Footer() {
             <div className="mt-6 flex items-center gap-4">
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-all hover:border-primary/20 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all hover:border-primary hover:bg-primary hover:text-white cursor-pointer"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-all hover:border-primary/20 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all hover:border-primary hover:bg-primary hover:text-white cursor-pointer"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" />
               </a>
               <a
                 href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-secondary text-muted-foreground transition-all hover:border-primary/20 hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all hover:border-primary hover:bg-primary hover:text-white cursor-pointer"
                 aria-label="Twitter"
               >
                 <Twitter className="h-4 w-4" />
@@ -128,7 +128,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-border">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-muted-foreground text-center sm:text-left">
-              © 2024 Maison Glacé. All rights reserved.
+              © 2024 Alexelle. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground">
               Crafted with passion in Paris

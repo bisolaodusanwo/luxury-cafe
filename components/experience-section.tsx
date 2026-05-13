@@ -1,25 +1,45 @@
+import Image from "next/image"
 import { Coffee, Sparkles, Clock, Award } from "lucide-react"
 
 const experiences = [
   {
     icon: Sparkles,
     title: "Handcrafted Daily",
-    description: "Every batch is made fresh each morning using traditional Italian techniques passed down through generations.",
+    description: "Every batch is made fresh each morning using traditional Nigerian techniques passed down through generations.",
+    image: "/images/gallery-2.jpg",
   },
   {
     icon: Coffee,
     title: "Specialty Coffee",
     description: "Single-origin beans roasted in-house, expertly brewed by our certified baristas.",
+    image: "/images/gallery-3.jpg",
   },
   {
     icon: Award,
     title: "Premium Ingredients",
     description: "We source only the finest ingredients from trusted suppliers across the globe.",
+    image: "/images/gallery-4.jpg",
   },
   {
     icon: Clock,
     title: "Timeless Recipes",
     description: "Classic recipes refined over decades, honoring tradition while embracing innovation.",
+    image: "/images/gallery-5.jpg",
+  },
+]
+
+const teamHighlights = [
+  {
+    name: "Chef Adeola",
+    role: "Head Chef",
+    image: "/images/chef.jpg",
+    description: "Leads our kitchen with refined Nigerian flavors and modern presentation.",
+  },
+  {
+    name: "Trainee Chiamaka",
+    role: "Culinary Trainee",
+    image: "/images/trainee.jpg",
+    description: "Supports daily prep and desserts, bringing fresh energy to every service.",
   },
 ]
 
@@ -46,44 +66,75 @@ export function ExperienceSection() {
               <span className="text-primary">Refined Taste</span>
             </h2>
             <p className="mt-8 text-lg text-muted-foreground leading-relaxed">
-              At Maison Glacé, we believe that exceptional taste begins with 
-              uncompromising quality. Every element of our café has been 
-              thoughtfully curated to deliver an experience that transcends 
-              the ordinary.
+              At Alexelle, exceptional Nigerian dining starts with premium
+              ingredients, skilled hands, and hospitality rooted in culture.
+              Every plate and dessert is crafted to feel both authentic and elevated.
             </p>
 
             <div className="mt-10 md:mt-12 grid grid-cols-3 gap-4 md:gap-8">
               <div>
-                <p className="font-serif text-3xl md:text-4xl font-light text-primary">24+</p>
-                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Unique Flavors</p>
+                <p className="font-serif text-3xl md:text-4xl font-light text-primary">30+</p>
+                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Nigerian Dishes</p>
               </div>
               <div>
-                <p className="font-serif text-3xl md:text-4xl font-light text-primary">15</p>
-                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Years of Craft</p>
+                <p className="font-serif text-3xl md:text-4xl font-light text-primary">12</p>
+                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Years Culinary Craft</p>
               </div>
               <div>
-                <p className="font-serif text-3xl md:text-4xl font-light text-primary">3</p>
-                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Locations</p>
+                <p className="font-serif text-3xl md:text-4xl font-light text-primary">4.9</p>
+                <p className="mt-1 md:mt-2 text-xs md:text-sm text-muted-foreground">Guest Rating</p>
               </div>
             </div>
           </div>
 
           {/* Right Column - Features Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {teamHighlights.map((member) => (
+              <article
+                key={member.name}
+                className="glass-panel rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/20"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+                </div>
+                <div className="p-5">
+                  <p className="text-xs uppercase tracking-[0.2em] text-primary">{member.role}</p>
+                  <h3 className="mt-2 font-serif text-2xl font-light text-foreground">{member.name}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{member.description}</p>
+                </div>
+              </article>
+            ))}
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="glass-panel rounded-xl p-6 transition-all duration-300 hover:border-primary/20"
+                className="glass-panel rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/20"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                  <exp.icon className="h-6 w-6 text-primary" />
+                <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                  <Image
+                    src={exp.image}
+                    alt={exp.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent" />
                 </div>
-                <h3 className="mt-4 font-serif text-xl font-light text-foreground">
-                  {exp.title}
-                </h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  {exp.description}
-                </p>
+                <div className="p-6">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                    <exp.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="mt-4 font-serif text-lg font-light text-foreground">
+                    {exp.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {exp.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>

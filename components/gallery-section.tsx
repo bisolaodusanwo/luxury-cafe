@@ -7,8 +7,8 @@ const galleryImages = [
     span: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
   },
   {
-    src: "/images/gallery-2.jpg",
-    alt: "Artisan gelato being prepared",
+    src: "/images/chef.jpg",
+    alt: "Nigerian chef preparing signature dishes",
     span: "col-span-1 row-span-1",
   },
   {

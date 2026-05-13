@@ -4,34 +4,38 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0F172A;
-  --background-secondary: #111827;
-  --foreground: #F8FAFC;
+  --background: #050A30; /* Off-Navy */
+  --background-secondary: #3E160C; /* Rough */
+  --foreground: #E8D9C4; /* Pale */
   --card: rgba(255, 255, 255, 0.03);
-  --card-foreground: #F8FAFC;
-  --popover: #111827;
-  --popover-foreground: #F8FAFC;
-  --primary: #D4AF37;
-  --primary-foreground: #0F172A;
-  --secondary: rgba(255, 255, 255, 0.05);
-  --secondary-foreground: #F8FAFC;
+  --card-foreground: #E8D9C4;
+  --popover: #3E160C;
+  --popover-foreground: #E8D9C4;
+  --primary: #785D32; /* Gold */
+  --primary-foreground: #E8D9C4;
+  --secondary: #E8D9C4;
+  --secondary-foreground: #3E160C;
   --muted: #1E293B;
   --muted-foreground: #9CA3AF;
-  --accent: #D4AF37;
-  --accent-foreground: #0F172A;
+  --accent: #785D32;
+  --accent-foreground: #E8D9C4;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #F8FAFC;
+  --destructive-foreground: #E8D9C4;
   --border: rgba(255, 255, 255, 0.08);
   --input: #1a2236;
-  --ring: #D4AF37;
-  --chart-1: #D4AF37;
+  --ring: #785D32;
+  --chart-1: #785D32;
   --chart-2: #9CA3AF;
-  --chart-3: #F8FAFC;
-  --chart-4: #1E293B;
-  --chart-5: #334155;
+  --chart-3: #E8D9C4;
+  --chart-4: #3E160C;
+  --chart-5: #050A30;
   --radius: 0.625rem;
-  --gold: #D4AF37;
-  --gold-muted: rgba(212, 175, 55, 0.15);
+  --gold: #785D32;
+  --gold-muted: rgba(120, 93, 50, 0.15);
+  --luxury-pale: #E8D9C4;
+  --luxury-gold: #785D32;
+  --luxury-rough: #3E160C;
+  --luxury-offnavy: #050A30;
 }
 
 @theme inline {

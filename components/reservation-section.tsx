@@ -37,7 +37,7 @@ export function ReservationSection() {
             Reserve Your Table
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Secure your seat at Maison Glacé for an unforgettable experience.
+            Secure your seat at Alexelle for an unforgettable experience.
           </p>
         </div>
 

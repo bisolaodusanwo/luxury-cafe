@@ -5,10 +5,10 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
-  { name: "Menu", href: "#menu" },
-  { name: "Experience", href: "#experience" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Locations", href: "#locations" },
+  { name: "Menu", href: "/menu" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Locations", href: "/#locations" },
 ]
 
 export function Navbar() {
@@ -22,7 +22,7 @@ export function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <span className="font-serif text-2xl font-medium tracking-wide text-foreground">
-                Maison Glacé
+                Alexelle
               </span>
             </Link>
 

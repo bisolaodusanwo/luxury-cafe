@@ -768,7 +768,7 @@ function ReceiptScreen({ booking }: { booking: BookingResponse }) {
         <div className="glass-panel rounded-2xl overflow-hidden print:border print:border-gray-200 print:shadow-none">
           {/* Gold header */}
           <div className="bg-primary px-8 py-7 text-center">
-            <p className="text-primary-foreground/70 text-xs tracking-[0.3em] uppercase mb-1">Maison Glacé</p>
+            <p className="text-primary-foreground/70 text-xs tracking-[0.3em] uppercase mb-1">Alexelle</p>
             <h1 className="font-serif text-2xl font-light text-primary-foreground">Booking Confirmation</h1>
           </div>
 
@@ -1026,7 +1026,7 @@ export default function BookingPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-sm font-medium tracking-[0.3em] uppercase text-primary mb-4">
-            Maison Glacé
+            Alexelle
           </p>
           <h1 className="font-serif text-4xl md:text-5xl font-light text-foreground">
             Reserve Your Seat

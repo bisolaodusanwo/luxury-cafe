@@ -18,6 +18,10 @@ node_modules
 Backend/bin/
 Backend/obj/
 
+# .NET local secrets (never commit)
+Backend/appsettings.Development.json
+Backend/appsettings.*.json
+
 
 /node_modules
 /Backend

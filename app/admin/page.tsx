@@ -517,7 +517,7 @@ export default function AdminDashboard() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
-              <span className="font-serif text-xl font-medium text-foreground">Maison Glacé</span>
+              <span className="font-serif text-xl font-medium text-foreground">Alexelle</span>
               <span className="hidden sm:block h-4 w-px bg-border" />
               <span className="hidden sm:block text-sm text-muted-foreground">Admin</span>
             </div>

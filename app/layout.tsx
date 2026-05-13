@@ -15,7 +15,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Maison Glacé | Artisan Ice Cream & Café',
+  title: 'Alexelle | Artisan Ice Cream & Café',
   description: 'Experience the finest artisan ice cream and café delicacies crafted with passion and precision.',
   generator: 'v0.app',
   icons: {

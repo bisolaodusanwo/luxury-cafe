@@ -54,7 +54,7 @@ export default function AdminLoginPage() {
         {/* Branding */}
         <div className="text-center mb-10">
           <p className="text-sm font-medium tracking-[0.3em] uppercase text-primary mb-3">
-            Maison Glacé
+            Alexelle
           </p>
           <h1 className="font-serif text-3xl font-light text-foreground">Admin Portal</h1>
           <p className="mt-2 text-sm text-muted-foreground">Sign in to manage reservations</p>

@@ -2,10 +2,10 @@ import { MapPin, Clock, Phone } from "lucide-react"
 
 const locations = [
   {
-    city: "Paris",
-    address: "42 Rue de Rivoli, 75004",
-    hours: "8:00 AM - 10:00 PM",
-    phone: "+33 1 42 86 82 82",
+    city: "Lagos",
+    address: "145 Ikoyi Crescent, Ikoyi GRA, Lagos",
+    hours: "10:00 AM - 10:00 PM",
+    phone: "+234 1 2700 3000",
     featured: true,
   },
   {
@@ -45,8 +45,8 @@ export function LocationsSection() {
             Our Locations
           </h2>
           <p className="mt-6 max-w-xl mx-auto text-muted-foreground leading-relaxed">
-            Experience Maison Glacé at one of our carefully designed spaces 
-            around the world.
+            Experience Alexelle at our flagship Lagos location or select 
+            international venues.
           </p>
         </div>
 
